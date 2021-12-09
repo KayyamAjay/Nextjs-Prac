@@ -1,5 +1,4 @@
 import MeetupList from "../components/meetups/MeetupList";
-import Card from "../components/ui/Card";
 const Dummy = [
   {
     id: "1",
@@ -11,10 +10,6 @@ const Dummy = [
   },
 ];
 const HomePage = () => {
-  return (
-    <Card>
-      <MeetupList meetups={Dummy} />
-    </Card>
-  );
+  return <MeetupList meetups={Dummy} />;
 };
 export default HomePage;
