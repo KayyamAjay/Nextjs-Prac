@@ -9,7 +9,16 @@ const Dummy = [
     description: "My first meetup",
   },
 ];
-const HomePage = () => {
-  return <MeetupList meetups={Dummy} />;
+const HomePage = (props) => {
+  return <MeetupList meetups={props.meetups} />;
 };
+export async function getStaticProps() {
+  return {
+    props: {
+      meetups: Dummy,
+    },
+    revalidate: 10,
+  };
+}
+
 export default HomePage;
