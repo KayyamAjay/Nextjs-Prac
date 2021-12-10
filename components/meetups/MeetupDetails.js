@@ -5,6 +5,7 @@ const MeetupDetails = (props) => {
     <section className={classes.details}>
       <img src={props.img} alt={props.title} />
       <h1>{props.title}</h1>
+      <p>{props.address}</p>
       <p>{props.description}</p>
     </section>
   );
